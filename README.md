@@ -59,14 +59,15 @@ This project uses multiple datasets for training and evaluation:
 - Used for **unpaired testing**, where the corresponding high-light images are not available.
 
 ### Dataset Locations:
-- **LOL v1 and v2 Dataset:**  
-  `Z:/Documents/Low_light_image_restoration/LowLightMultiData/LowLight/`
+- **LOL v1 Dataset:**  
+  (https://www.kaggle.com/datasets/soumikrakshit/lol-dataset)
+  
+
+  - **LOL v2 Dataset:**  
+  (https://www.kaggle.com/datasets/tanhyml/lol-v2-dataset))
 
 - **DICM Dataset:**  
-  `Z:/Documents/Low_light_image_restoration/LowLightMultiData/LowLight/images_test/`
-
-- **Unpaired Testing Dataset:**  
-  `Z:/Documents/Low_light_image_restoration/LowLightMultiData/LowLight/unpaired_outputs/`
+ [ (https://figshare.com/articles/dataset/_Information_zip/27192921)
 
 Ensure the dataset paths are correctly set when running training or evaluation commands.
 
@@ -116,7 +117,7 @@ This command starts training using 32 generator and discriminator filters (`--ng
 To fine-tune the model on specific datasets, use a pre-trained model. Run the following command:
 
 ```bash
-python train_separate_split.py --mode syn --resume "Z:/Documents/Low_light_image_restoration/LowLightMultiData/LowLight/best_checkpoint/netG_model_best_mixed_psnr_22.6491_ssim_0.9951.pth" --epoch_count 0 --niter 100 --niter_decay 100 --cuda
+python train_separate_split.py --mode syn --resume "model_path" --epoch_count 0 --niter 100 --niter_decay 100 --cuda
 ```
 
 ### Training Modes:
@@ -143,7 +144,7 @@ Ensure the paths to the test images are correctly specified in the script.
 For unpaired testing (testing on datasets like DICM without corresponding high-light images), use this command:
 
 ```bash
-python eval_no_ref_pyiqa.py "Z:/Documents/Low_light_image_restoration/LowLightMultiData/LowLight/unpaired_outputs/dcim_lolv2_real"
+python eval_no_ref_pyiqa.py "dicm_dataset_path"
 ```
 
 This command evaluates the perceptual quality of the generated images using metrics such as NIQE and BRISQUE.
