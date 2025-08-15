@@ -1,6 +1,5 @@
 
-# SpectroFormer Reborn: A Slimmed Architecture for Low-Light Image Enhancement Using Dual Attention Mechanisms
-
+# Spectro-transformer: A Slimmed Architecture for Low-Light Image Restoration
 ## Overview
 
 This repository contains the code and model implementations for a **Low-Light Image Enhancement (LLIE)** project. The goal of this project is to enhance the quality of low-light images by leveraging deep learning models, specifically improving:
