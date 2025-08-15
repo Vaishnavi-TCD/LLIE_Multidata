@@ -102,6 +102,11 @@ print(f"Loaded {len(real_images)} real images.")
 print(f"Loaded {len(syn_images)} synthetic images.")
 ```
 
+## Model Architecture
+
+![SpectroFormer Reborn Architecture](Spectro-transformer-block-diagram.png)
+
+
 ## Training
 
 To train the model, use the following command:
@@ -148,6 +153,7 @@ python eval_no_ref_pyiqa.py "dicm_dataset_path"
 ```
 
 This command evaluates the perceptual quality of the generated images using metrics such as NIQE and BRISQUE.
+
 
 ## File Structure
 
